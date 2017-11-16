@@ -2,13 +2,17 @@
  * Create a list that holds all of your cards
  */
 
-var cards = document.getElementsByClassName('card');
+var cards = document.getElementsByClassName("card");
 console.log(cards);
 
-cards.addEventListener("click", function () {
-    cards.classList.toggle("open", "show");
-});
+var cardFunction = function (){
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+};
 
+for (var i = 0; i < cards.length; i++){
+    cards[i].addEventListener("click", cardFunction);
+}
 
 
 function shuffle(array) {
@@ -24,9 +28,3 @@ function shuffle(array) {
 
     return array;
 };
-
- cards.onclick = function(event){
-     this.classList.toggle('open');
-     this.classList.toggle('show');
-
- }
