@@ -40,4 +40,12 @@ function shuffle(array) {
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
+var displayCard = function (){
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+};
 
+for (var i = 0; i < cards.length; i++){
+    var card = cards[i];
+    card.addEventListener("click", displayCard);
+};
