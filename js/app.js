@@ -45,7 +45,14 @@ var displayCard = function (){
     this.classList.toggle("show");
 };
 
+var openedCards = [];
+
+function addOpen() {
+    openedCards.push(this.type);
+};
+
 for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
+    card.addEventListener("click", addOpen);
 };
