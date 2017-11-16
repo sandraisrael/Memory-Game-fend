@@ -2,8 +2,12 @@
  * Create a list that holds all of your cards
  */
 
-var card = document.querySelectorAll('.card');
-console.log(card);
+var cards = document.getElementsByClassName('card');
+console.log(cards);
+
+cards.addEventListener("click", function () {
+    cards.classList.toggle("open", "show");
+});
 
 var cards = [... card];
 console.log(cards[12]);
@@ -28,8 +32,11 @@ function shuffle(array) {
     }
 
     return array;
-}
+};
 
+ cards.onclick = function(event){
+     this.classList.toggle('open');
+     this.classList.toggle('show');
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -41,3 +48,4 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+ }
