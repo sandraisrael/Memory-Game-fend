@@ -2,7 +2,8 @@
  * Create a list that holds all of your cards
  */
 
-var cards = document.getElementsByClassName("card");
+var card = document.getElementsByClassName("card");
+var cards = [...card]
 console.log(cards);
 
 /*
