@@ -43,7 +43,7 @@ function startGame(){
         [].forEach.call(cards, function(item) {
             deck.appendChild(item);
         });
-        cards[i].classList.remove("show", "open");
+        cards[i].classList.remove("show", "open", "match");
     }
 
 }
