@@ -14,6 +14,8 @@ var deck = document.getElementById("card-deck");
 var moves = 0;
 var counter = document.querySelector(".moves");
 
+var stars = document.querySelectorAll(".fa-star");
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -126,6 +128,26 @@ function enable(){
 function moveCounter(){
     moves++;
     counter.innerHTML = moves;
+    // setting rates based on moves
+    if (moves > 7 && moves < 14){
+        for( i= 0; i < 3; i++){
+            if(i > 1){
+                stars[i].style.color = "#000";
+            }
+        }
+    }
+    else if (moves > 14 && moves < 21){
+        for( i= 0; i < 3; i++){
+            if(i > 0){
+                stars[i].style.color = "#000";
+            }
+        }
+    }
+    else if (moves > 21){
+        for( i= 0; i < 3; i++){
+            stars[i].style.color = "#000";
+        }
+    }
 }
 
 
