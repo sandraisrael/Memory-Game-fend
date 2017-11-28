@@ -80,8 +80,6 @@ function cardOpen() {
         } else {
             unmatched();
         }
-    } else {
-        console.log("Select another card");
     }
 };
 
