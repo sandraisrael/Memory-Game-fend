@@ -21,8 +21,9 @@ var stars = document.querySelectorAll(".fa-star");
 var matchedCard = document.getElementsByClassName("match");
 var matchedCards = [...matchedCard];
 
-// declare star rating variable
-var starRating = document.querySelector(".stars").innerHTML;
+ // stars list
+ var starsList = document.querySelectorAll(".stars li");
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -64,6 +65,7 @@ function startGame(){
     // reset rating
     for (var i= 0; i < stars.length; i++){
         stars[i].style.color = "#FFD700";
+        stars[i].style.visibility = "visible";
     }
     //reset timer
     second = 0;
@@ -157,20 +159,20 @@ function moveCounter(){
     if (moves > 7 && moves < 14){
         for( i= 0; i < 3; i++){
             if(i > 1){
-                stars[i].style.color = "#000";
+                stars[i].style.visibility = "collapse";
             }
         }
     }
     else if (moves > 14 && moves < 21){
         for( i= 0; i < 3; i++){
             if(i > 0){
-                stars[i].style.color = "#000";
+                stars[i].style.visibility = "collapse";
             }
         }
     }
     else if (moves > 21){
         for( i= 0; i < 3; i++){
-            stars[i].style.color = "#000";
+            stars[i].style.visibility = "collapse";
         }
     }
 
@@ -202,6 +204,9 @@ function congratulations(){
         console.log("a match occured")
         var modal = document.getElementById("popup1")
         modal.classList.add("show");
+
+        // declare star rating variable
+        var starRating = document.querySelector(".stars").innerHTML;
 
         //showing move, rating, time on modal
         document.getElementById("finalMove").innerHTML = moves;
