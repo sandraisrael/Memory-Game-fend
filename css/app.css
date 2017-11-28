@@ -112,4 +112,5 @@ h1 {
 }
 .timer{
     display: inline-block;
+    margin: 0 5rem;
 }
