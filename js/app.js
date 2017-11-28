@@ -105,6 +105,20 @@ function unmatched(){
     },400);
 }
 
+//function to disable cards temporarily
+function disable(){
+    Array.prototype.filter.call(cards, function(card){
+        card.classList.add('disabled');
+    });
+}
+//function to enable cards 
+function enable(){
+    Array.prototype.filter.call(cards, function(card){
+        card.classList.remove('disabled');
+    });
+}
+
+
 // loop to add event listeners to each cards
 for (var i = 0; i < cards.length; i++){
     var card = cards[i];
