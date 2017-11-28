@@ -132,6 +132,13 @@ function enable(){
 function moveCounter(){
     moves++;
     counter.innerHTML = moves;
+    //setting timer
+    if(moves == 1){
+        second = 0;
+        minute = 0; 
+        hour = 0;
+        startTimer();
+    }
     // setting rates based on moves
     if (moves > 7 && moves < 14){
         for( i= 0; i < 3; i++){
@@ -152,6 +159,26 @@ function moveCounter(){
             stars[i].style.color = "#000";
         }
     }
+
+}
+
+// create timer
+var second = 0, minute = 0; hour = 0;
+var timer = document.querySelector(".timer");
+var interval;
+function startTimer(){
+    interval = setInterval(function(){
+        timer.innerHTML = hour+":"+minute+":"+second;
+        second++;
+        if(second == 60){
+            minute++;
+            second=0;
+        }
+        if(minute == 60){
+            hour++;
+            minute = 0;
+        }
+    },1000);
 }
 
 
