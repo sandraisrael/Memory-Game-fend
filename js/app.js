@@ -40,17 +40,49 @@ function shuffle(array) {
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
+
+// function to add and remove open and show class from cards so they display
 var displayCard = function (){
     this.classList.toggle("open");
     this.classList.toggle("show");
 };
 
+// function for when cards match
+function matched(){
+    openedCards[0].classList.add("match");
+    openedCards[1].classList.add("match");
+    openedCards[0].classList.remove("show", "open");
+    openedCards[1].classList.remove("show", "open");
+    openedCards= [];
+}
+
+// function for when cards don't match
+function unmatched(){
+    console.log(openedCards);
+    openedCards[0].classList.remove("show", "open");
+    openedCards[1].classList.remove("show", "open");  
+    openedCards= [];  
+}
+
+// array for opened cards
 var openedCards = [];
 
+// function to add opened cards to OpenedCards list
 function addOpen() {
-    openedCards.push(this.type);
+    openedCards.push(this);
+    if(openedCards.length === 2){
+        if(openedCards[0].type === openedCards[1].type){
+            matched();
+        } else {
+            unmatched();
+        }
+    } else {
+        console.log("Select another card");
+    }
+
 };
 
+// loop to add event listeners to each cards
 for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
