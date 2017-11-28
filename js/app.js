@@ -12,6 +12,7 @@ var deck = document.getElementById("card-deck");
 
 // declaring move variable
 var moves = 0;
+var counter = document.querySelector(".moves");
 
 /*
  * Display the cards on the page
@@ -48,7 +49,9 @@ function startGame(){
         });
         cards[i].classList.remove("show", "open", "match");
     }
-
+    // reset moves
+    moves = 0;
+    counter.innerHTML = moves;
 }
 
 
@@ -121,7 +124,6 @@ function enable(){
 
 // function to count player's movessss
 function moveCounter(){
-    var counter = document.querySelector(".moves");
     moves++;
     counter.innerHTML = moves;
 }
