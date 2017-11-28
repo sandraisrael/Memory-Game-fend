@@ -26,7 +26,7 @@
 
             <div class="timer">
             </div>
-            
+
             <div class="restart" onclick=startGame()>
         		<i class="fa fa-repeat"></i>
         	</div>
@@ -83,6 +83,21 @@
             </li>
         </ul>
     </div>
+
+    <a class="button" href="#popup1">Click for Pop up</a>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Congratulations🎉🎉🎉</h2>
+            <a class="close" href=# >×</a>
+            <div class="content">
+                Congratulations you won the game!
+                <p>You made <span id=totalTime>finalTime</span> moves </h3>
+                <h3>in <span id=totalTime> </span> </h3>
+                <h3>You're rated <span id=starRating> </span> </h3>
+            </div>
+        </div>
+    </div>
+
 
     <script src="js/app.js"></script>
 </body>
