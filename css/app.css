@@ -112,7 +112,7 @@ h1 {
 }
 .timer{
     display: inline-block;
-    margin: 0 3.5rem;
+    margin: 0 1rem;
 }
 
 /*
@@ -139,7 +139,7 @@ h1 {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 50%;
+    width: 35%;
     position: relative;
     transition: all 5s ease-in-out;
   }
