@@ -200,6 +200,10 @@ function congratulations(){
         var modal = document.getElementById("popup1")
         modal.classList.add("show");
 
+        //showing move, rating, time on modal
+        document.getElementById("finalMove").innerHTML = moves;
+
+        //closeicon
         var closeicon = document.querySelector(".close");
         closeicon.addEventListener("click", function(e){
             modal.classList.remove("show");
