@@ -107,3 +107,6 @@ h1 {
     float: right;
     cursor: pointer;
 }
+.fa-star{
+    color: #FFD700;
+}
