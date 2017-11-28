@@ -10,6 +10,9 @@ console.log(cards);
 // deck of all cards in game
 var deck = document.getElementById("card-deck");
 
+// declaring move variable
+var moves = 0;
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -116,10 +119,18 @@ function enable(){
     });
 }
 
+// function to count player's movessss
+function moveCounter(){
+    var counter = document.querySelector(".moves");
+    moves++;
+    counter.innerHTML = moves;
+}
+
 
 // loop to add event listeners to each cards
 for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
+    card.addEventListener("click", moveCounter)
 };
