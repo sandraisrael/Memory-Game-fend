@@ -32,6 +32,21 @@ function shuffle(array) {
 
     return array;
 };
+// Shuffle game when page is refreshed
+document.body.onload = startGame();
+
+// startGame function to shuffle cards 
+function startGame(){
+    cards = shuffle(cards);
+    for (var i = 0; i < cards.length; i++){
+        deck.innerHTML = "";
+        [].forEach.call(cards, function(item) {
+            deck.appendChild(item);
+        });
+        cards[i].classList.remove("show", "open");
+    }
+
+}
 
 
 /*
