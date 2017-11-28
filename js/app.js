@@ -72,7 +72,7 @@ function startGame(){
     minute = 0; 
     hour = 0;
     var timer = document.querySelector(".timer");
-    timer.innerHTML = "0:0:0";
+    timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
 }
 
@@ -184,7 +184,7 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = hour+":"+minute+":"+second;
+        timer.innerHTML = minute+"mins "+second+"secs";
         second++;
         if(second == 60){
             minute++;
@@ -201,7 +201,9 @@ function startTimer(){
 function congratulations(){
     if (matchedCard.length == 2){
         clearInterval(interval);
-        console.log("a match occured")
+        finalTime = timer.innerHTML;
+
+        // show congratulations modal
         var modal = document.getElementById("popup1")
         modal.classList.add("show");
 
@@ -211,7 +213,9 @@ function congratulations(){
         //showing move, rating, time on modal
         document.getElementById("finalMove").innerHTML = moves;
         document.getElementById("starRating").innerHTML = starRating;
-        //closeicon
+        document.getElementById("totalTime").innerHTML = finalTime;
+
+        //closeicon on modal
         var closeicon = document.querySelector(".close");
         closeicon.addEventListener("click", function(e){
             modal.classList.remove("show");
