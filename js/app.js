@@ -20,6 +20,9 @@ var stars = document.querySelectorAll(".fa-star");
 // declaring variable of matchedCards
 var matchedCard = document.getElementsByClassName("match");
 var matchedCards = [...matchedCard];
+
+// declare star rating variable
+var starRating = document.querySelector(".stars").innerHTML;
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -202,7 +205,7 @@ function congratulations(){
 
         //showing move, rating, time on modal
         document.getElementById("finalMove").innerHTML = moves;
-
+        document.getElementById("starRating").innerHTML = starRating;
         //closeicon
         var closeicon = document.querySelector(".close");
         closeicon.addEventListener("click", function(e){
