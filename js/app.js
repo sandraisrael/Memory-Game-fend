@@ -2,9 +2,13 @@
  * Create a list that holds all of your cards
  */
 
+// cards array holds all cards
 var card = document.getElementsByClassName("card");
 var cards = [...card]
 console.log(cards);
+
+// deck of all cards in game
+var deck = document.getElementById("card-deck");
 
 /*
  * Display the cards on the page
