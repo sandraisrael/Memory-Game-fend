@@ -168,4 +168,8 @@ h1 {
     overflow: auto;
     text-align: center;
   }
+  .show{
+    visibility: visible !important;
+    opacity: 100 !important;
+}
 
