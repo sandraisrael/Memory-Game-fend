@@ -199,7 +199,7 @@ function startTimer(){
 
 // function for congratulation-end-game
 function congratulations(){
-    if (matchedCard.length == 2){
+    if (matchedCard.length == 16){
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
