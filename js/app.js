@@ -70,6 +70,21 @@ var displayCard = function (){
 // array for opened cards
 var openedCards = [];
 
+// function to add opened cards to OpenedCards list
+function cardOpen() {
+    openedCards.push(this);
+    var len = openedCards.length;
+    if(len === 2){
+        if(openedCards[0].type === openedCards[1].type){
+            matched();
+        } else {
+            unmatched();
+        }
+    } else {
+        console.log("Select another card");
+    }
+};
+
 // function for when cards match
 function matched(){
     openedCards[0].classList.add("match");
@@ -87,25 +102,9 @@ function unmatched(){
     openedCards= [];  
 }
 
-
-// function to add opened cards to OpenedCards list
-function addOpen() {
-    openedCards.push(this);
-    if(openedCards.length === 2){
-        if(openedCards[0].type === openedCards[1].type){
-            matched();
-        } else {
-            unmatched();
-        }
-    } else {
-        console.log("Select another card");
-    }
-
-};
-
 // loop to add event listeners to each cards
 for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
-    card.addEventListener("click", addOpen);
+    card.addEventListener("click", cardOpen);
 };
