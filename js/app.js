@@ -96,10 +96,13 @@ function matched(){
 
 // function for when cards don't match
 function unmatched(){
-    console.log(openedCards);
-    openedCards[0].classList.remove("show", "open");
-    openedCards[1].classList.remove("show", "open");  
-    openedCards= [];  
+    disable();
+    setTimeout(function(){
+        openedCards[0].classList.remove("show", "open");
+        openedCards[1].classList.remove("show", "open");
+        enable();
+        openedCards = [];
+    },400);
 }
 
 // loop to add event listeners to each cards
