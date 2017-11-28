@@ -168,8 +168,12 @@ h1 {
     overflow: auto;
     text-align: center;
   }
-  .show{
+.show{
     visibility: visible !important;
     opacity: 100 !important;
 }
+#starRating li{       
+    display: inline-block;
+}
+
 
