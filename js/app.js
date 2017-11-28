@@ -14,8 +14,12 @@ var deck = document.getElementById("card-deck");
 var moves = 0;
 var counter = document.querySelector(".moves");
 
+// declare variables for star icons
 var stars = document.querySelectorAll(".fa-star");
 
+// declaring variable of matchedCards
+var matchedCard = document.getElementsByClassName("match");
+var matchedCards = [...matchedCard];
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -188,11 +192,27 @@ function startTimer(){
     },1000);
 }
 
+// function for congratulation-end-game
+function congratulations(){
+    if (matchedCard.length == 2){
+        clearInterval(interval);
+        console.log("a match occured")
+        var modal = document.getElementById("popup1")
+        modal.classList.add("show");
+
+        var closeicon = document.querySelector(".close");
+        closeicon.addEventListener("click", function(e){
+            modal.classList.remove("show");
+            startGame();
+        })
+    };
+}
 
 // loop to add event listeners to each cards
 for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
-    card.addEventListener("click", moveCounter)
+    card.addEventListener("click", moveCounter);
+    card.addEventListener("click",congratulations);
 };
