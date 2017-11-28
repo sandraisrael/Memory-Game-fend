@@ -58,6 +58,13 @@ function startGame(){
     for (var i= 0; i < stars.length; i++){
         stars[i].style.color = "#FFD700";
     }
+    //reset timer
+    second = 0;
+    minute = 0; 
+    hour = 0;
+    var timer = document.querySelector(".timer");
+    timer.innerHTML = "0:0:0";
+    clearInterval(interval);
 }
 
 
