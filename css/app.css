@@ -110,3 +110,6 @@ h1 {
 .fa-star{
     color: #FFD700;
 }
+.timer{
+    display: inline-block;
+}
