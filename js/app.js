@@ -67,6 +67,9 @@ var displayCard = function (){
     this.classList.toggle("show");
 };
 
+// array for opened cards
+var openedCards = [];
+
 // function for when cards match
 function matched(){
     openedCards[0].classList.add("match");
@@ -84,8 +87,6 @@ function unmatched(){
     openedCards= [];  
 }
 
-// array for opened cards
-var openedCards = [];
 
 // function to add opened cards to OpenedCards list
 function addOpen() {
