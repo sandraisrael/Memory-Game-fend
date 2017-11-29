@@ -69,6 +69,7 @@ function startGame(){
 var displayCard = function (){
     this.classList.toggle("open");
     this.classList.toggle("show");
+    this.classList.toggle("no-event");
 };
 
 // array for opened cards
@@ -91,8 +92,8 @@ function cardOpen() {
 function matched(){
     openedCards[0].classList.add("match");
     openedCards[1].classList.add("match");
-    openedCards[0].classList.remove("show", "open");
-    openedCards[1].classList.remove("show", "open");
+    openedCards[0].classList.remove("show", "open", "no-event");
+    openedCards[1].classList.remove("show", "open", "no-event");
     openedCards= [];
 }
 
@@ -100,8 +101,8 @@ function matched(){
 function unmatched(){
     disable();
     setTimeout(function(){
-        openedCards[0].classList.remove("show", "open");
-        openedCards[1].classList.remove("show", "open");
+        openedCards[0].classList.remove("show", "open", "no-event");
+        openedCards[1].classList.remove("show", "open", "no-event");
         enable();
         openedCards = [];
     },400);
