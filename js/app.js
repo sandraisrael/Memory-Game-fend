@@ -80,6 +80,7 @@ function cardOpen() {
     openedCards.push(this);
     var len = openedCards.length;
     if(len === 2){
+        moveCounter();
         if(openedCards[0].type === openedCards[1].type){
             matched();
         } else {
@@ -136,21 +137,21 @@ function moveCounter(){
         startTimer();
     }
     // setting rates based on moves
-    if (moves > 7 && moves < 14){
+    if (moves > 8 && moves < 12){
         for( i= 0; i < 3; i++){
             if(i > 1){
                 stars[i].style.visibility = "collapse";
             }
         }
     }
-    else if (moves > 14 && moves < 21){
+    else if (moves > 12 && moves < 19){
         for( i= 0; i < 3; i++){
             if(i > 0){
                 stars[i].style.visibility = "collapse";
             }
         }
     }
-    else if (moves > 21){
+    else if (moves > 22){
         for( i= 0; i < 3; i++){
             stars[i].style.visibility = "collapse";
         }
@@ -209,6 +210,5 @@ for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
-    // card.addEventListener("click", moveCounter);
     card.addEventListener("click",congratulations);
 };
