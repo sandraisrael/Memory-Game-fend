@@ -99,13 +99,16 @@ function matched(){
 
 // function for when cards don't match
 function unmatched(){
+    openedCards[0].classList.add("unmatched");
+    openedCards[1].classList.add("unmatched");
     disable();
     setTimeout(function(){
-        openedCards[0].classList.remove("show", "open", "no-event");
-        openedCards[1].classList.remove("show", "open", "no-event");
+        openedCards[0].classList.remove("show", "open", "no-event","unmatched");
+        openedCards[1].classList.remove("show", "open", "no-event","unmatched");
+        
         enable();
         openedCards = [];
-    },400);
+    },1100);
 }
 
 //function to disable cards temporarily
@@ -206,6 +209,6 @@ for (var i = 0; i < cards.length; i++){
     var card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
-    card.addEventListener("click", moveCounter);
+    // card.addEventListener("click", moveCounter);
     card.addEventListener("click",congratulations);
 };
