@@ -51,7 +51,7 @@ function startGame(){
         [].forEach.call(cards, function(item) {
             deck.appendChild(item);
         });
-        cards[i].classList.remove("show", "open", "match");
+        cards[i].classList.remove("show", "open", "match", "disabled");
     }
     // reset moves
     moves = 0;
