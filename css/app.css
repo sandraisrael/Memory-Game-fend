@@ -99,9 +99,6 @@ h1 {
     pointer-events: none;
     opacity: 0.9;
 }
-.no-event{
-    pointer-events: none;
-}
 
 /*
  * Styles for the Score Panel
