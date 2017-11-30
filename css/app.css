@@ -160,7 +160,7 @@ h1 {
     padding: 20px;
     background: #EAF1FC;
     border-radius: 5px;
-    width: 35%;
+    width: 85%;
     position: relative;
     transition: all 5s ease-in-out;
   }
@@ -297,6 +297,9 @@ h1 {
   .score-panel{
     width: 60%;
   }
+  .popup{
+    width: 60%;
+  }
 }
 
 /* For ipad pro */
@@ -314,6 +317,9 @@ h1 {
   }
   .score-panel{
     width: 70%;
+  }
+  .popup{
+    width: 60%;
   }
 }
 /* desktop */
@@ -334,5 +340,8 @@ h1 {
   }
   .deck .card.show{
     font-size: 50px;
+  }
+  .popup{
+    width: 35%;
   }
 }
