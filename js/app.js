@@ -15,7 +15,6 @@ var stars = document.querySelectorAll(".fa-star");
 
 // declaring variable of matchedCards
 var matchedCard = document.getElementsByClassName("match");
-var matchedCards = [...matchedCard];
 
  // stars list
  var starsList = document.querySelectorAll(".stars li");
@@ -100,7 +99,7 @@ function matched(){
     openedCards[1].classList.add("match", "disabled");
     openedCards[0].classList.remove("show", "open", "no-event");
     openedCards[1].classList.remove("show", "open", "no-event");
-    openedCards= [];
+    openedCards = [];
 }
 
 // function for when cards don't match
@@ -127,6 +126,9 @@ function disable(){
 function enable(){
     Array.prototype.filter.call(cards, function(card){
         card.classList.remove('disabled');
+        for(var i = 0; i < matchedCard.length; i++){
+            matchedCard[i].classList.add("disabled");
+        }
     });
 }
 
