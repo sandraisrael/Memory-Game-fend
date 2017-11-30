@@ -51,13 +51,13 @@ h1 {
 }
 
 .deck .card {
-    height: 4.7rem;
-    width: 4.7rem;
-    margin: 0.5rem 0.5rem;
+    height: 3.7rem;
+    width: 3.7rem;
+    margin: 0.2rem 0.2rem;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -281,7 +281,18 @@ h1 {
 
 
   /* Media queries */
-
+@media (max-width: 320px) {
+  .deck{
+    width: 85%;
+  }
+  .deck .card{
+    height: 4.7rem;
+    width: 4.7rem;
+  }
+  .score-panel{
+    width: 
+  }
+}
 /* For Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
   .container{
