@@ -85,6 +85,7 @@ function startGame(){
 var displayCard = function (){
     this.classList.toggle("open");
     this.classList.toggle("show");
+    this.classList.toggle("disabled");
 };
 
 
