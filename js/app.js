@@ -96,8 +96,8 @@ function cardOpen() {
 
 // function for when cards match
 function matched(){
-    openedCards[0].classList.add("match");
-    openedCards[1].classList.add("match");
+    openedCards[0].classList.add("match", "disabled");
+    openedCards[1].classList.add("match", "disabled");
     openedCards[0].classList.remove("show", "open", "no-event");
     openedCards[1].classList.remove("show", "open", "no-event");
     openedCards= [];
@@ -179,7 +179,7 @@ function startTimer(){
 
 // function for congratulation-end-game
 function congratulations(){
-    if (matchedCard.length == 2){
+    if (matchedCard.length == 16){
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
