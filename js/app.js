@@ -1,4 +1,3 @@
-
 // cards array holds all cards
 var card = document.getElementsByClassName("card");
 var cards = [...card]
@@ -20,6 +19,12 @@ var matchedCards = [...matchedCard];
 
  // stars list
  var starsList = document.querySelectorAll(".stars li");
+
+ // close icon in modal
+ let closeicon = document.querySelector(".close");
+
+ // declare modal
+ let modal = document.getElementById("popup1")
 
 
 function shuffle(array) {
@@ -180,12 +185,11 @@ function startTimer(){
 
 // function for congratulation-end-game
 function congratulations(){
-    if (matchedCard.length == 16){
+    if (matchedCard.length == 2){
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
         // show congratulations modal
-        var modal = document.getElementById("popup1")
         modal.classList.add("show");
 
         // declare star rating variable
@@ -197,12 +201,22 @@ function congratulations(){
         document.getElementById("totalTime").innerHTML = finalTime;
 
         //closeicon on modal
-        var closeicon = document.querySelector(".close");
-        closeicon.addEventListener("click", function(e){
-            modal.classList.remove("show");
-            startGame();
-        })
+        closeModal();
     };
+}
+
+//close icon function
+function closeModal(){
+    closeicon.addEventListener("click", function(e){
+        modal.classList.remove("show");
+        startGame();
+    });
+}
+
+//playAgain function
+function playAgain(){
+    modal.classList.remove("show");
+    startGame();
 }
 
 // loop to add event listeners to each cards
