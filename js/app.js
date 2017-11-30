@@ -1,23 +1,23 @@
 // cards array holds all cards
-var card = document.getElementsByClassName("card");
-var cards = [...card]
+let card = document.getElementsByClassName("card");
+let cards = [...card]
 console.log(cards);
 
 // deck of all cards in game
-var deck = document.getElementById("card-deck");
+const deck = document.getElementById("card-deck");
 
 // declaring move variable
-var moves = 0;
-var counter = document.querySelector(".moves");
+let moves = 0;
+let counter = document.querySelector(".moves");
 
 // declare variables for star icons
-var stars = document.querySelectorAll(".fa-star");
+const stars = document.querySelectorAll(".fa-star");
 
 // declaring variable of matchedCards
-var matchedCard = document.getElementsByClassName("match");
+let matchedCard = document.getElementsByClassName("match");
 
  // stars list
- var starsList = document.querySelectorAll(".stars li");
+ let starsList = document.querySelectorAll(".stars li");
 
  // close icon in modal
  let closeicon = document.querySelector(".close");
@@ -216,7 +216,7 @@ function playAgain(){
 
 // loop to add event listeners to each cards
 for (var i = 0; i < cards.length; i++){
-    var card = cards[i];
+    card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
     card.addEventListener("click",congratulations);
