@@ -297,7 +297,8 @@ h1 {
 }
 
 
-/* Media queries */
+/****** Media queries
+***************************/
 
 
 @media (max-width: 320px) {
@@ -311,35 +312,8 @@ h1 {
 	}
 }
 
-/* For Tablets
-****************/
 
-/* @media (min-width: 768px) and (max-width: 1014px) {
-	.container {
-		width: 100%;
-		height: 100%;
-		font-size: 21px;
-	}
-
-	.deck {
-		width: 79%;
-	}
-
-	.deck .card {
-		height: 7rem;
-		width: 7rem;
-	}
-
-	.score-panel {
-		width: 660px;
-	}
-
-	.popup {
-		width: 60%;
-	}
-}
-min-width:1015px */
-/* For ipad pro
+/* For Tablets and larger screens
 ****************/
 
 @media (min-width: 768px) {
@@ -350,7 +324,6 @@ min-width:1015px */
 	.deck {
 		width: 660px;
 		height: 680px;
-		/* padding: 32px; */
 	}
 
 	.deck .card {
@@ -363,36 +336,3 @@ min-width:1015px */
 	}
 }
 
-/* and (max-width: 1389px) */
-
-/* desktop
-******************/
-
-/* @media (min-width: 1390px) {
-	.container {
-		width: 100%;
-		font-size: 20px;
-	}
-
-	.deck {
-		width: 50%;
-	}
-
-	.deck .card {
-		height: 9rem;
-		width: 9rem;
-		margin: 0.5rem;
-	}
-
-	.score-panel {
-		width: 45%;
-	}
-
-	.deck .card.show {
-		font-size: 50px;
-	}
-
-	.popup {
-		width: 35%;
-	}
-} */
