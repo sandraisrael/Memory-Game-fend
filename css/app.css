@@ -27,6 +27,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	height: 100vh;
 }
 
 h1 {
@@ -132,11 +133,11 @@ h1 {
 	cursor: pointer;
 }
 
-.fa-star{
+.fa-star {
 	color: #FFD700;
 }
 
-.timer{
+.timer {
 	display: inline-block;
 	margin: 0 1rem;
 }
