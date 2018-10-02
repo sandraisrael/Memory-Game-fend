@@ -230,6 +230,8 @@ function closeModal(){
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
+    // reset opened cards
+    openedCards = [];
     startGame();
 }
 
